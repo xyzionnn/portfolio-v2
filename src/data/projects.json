@@ -1,0 +1,19 @@
+[
+  {
+    "id": "01",
+    "title": "Digital Canvas & Architect Portfolio",
+    "vibe": "Artsy, Witty, Structural",
+    "tags": ["React", "Data Architecture", "UI/UX"],
+    "metrics": {
+      "creativity_level": "High",
+      "logic_score": "Solid",
+      "human_element": "100%"
+    },
+    "description": "A self-developed e-portfolio bridging the gap between Communication Arts and Front-end engineering.",
+    "reflection": "This project is my first step in proving that ADHD isn't a barrier, but a different way of architecting information.",
+    "links": {
+      "github": "your-repo-link-here",
+      "live": "pending"
+    }
+  }
+]

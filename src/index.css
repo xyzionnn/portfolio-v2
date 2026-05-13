@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  /* This adds a "Luxury Minimalist" font feel to your Tailwind theme */
+  --font-sans: "Inter", "Geist Sans", "system-ui", sans-serif;
+}
