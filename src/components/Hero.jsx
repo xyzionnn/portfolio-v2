@@ -59,34 +59,66 @@ export default function Hero({ scrollToSection, setView }) {
 
       </div>
 
-      {/* BOTTOM GLOBAL NAVIGATION LAYER */}
+      {/* ========================================================================= */}
+      {/* REFINED BOTTOM GLOBAL NAVIGATION LAYER                                    */}
+      {/* ========================================================================= */}
       <nav className="absolute bottom-0 inset-x-0 p-8 md:p-12 flex justify-center items-center z-50 pointer-events-none">
-        <div className="flex gap-12 md:gap-24 font-mono text-[11px] md:text-xs tracking-[0.4em] uppercase opacity-90 pointer-events-auto">
+        <div className="flex gap-8 md:gap-16 font-mono text-[10px] md:text-xs tracking-[0.35em] uppercase pointer-events-auto items-center selection:bg-transparent">
+          
+          {/* WORKS ACTION */}
           <button 
             onClick={() => scrollToSection('works-archive')} 
-            className="transition-opacity duration-300 hover:opacity-60"
+            className="group relative text-[#e3dac9]/60 hover:text-[#e3dac9] transition-colors duration-500 py-2"
           >
-            WORKS
+            <span className="relative z-10 transition-transform duration-500 block group-hover:-translate-y-0.5">WORKS</span>
+            {/* Sliding Underline Gauge */}
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[#C5A880] transition-all duration-500 ease-out group-hover:w-full opacity-80" />
           </button>
-          <button 
+
+          {/* SEPARATOR VECTOR */}
+          <span className="text-[#C5A880]/30 font-serif text-[10px] select-none">❖</span>
+
+          {/* HOME / CORE ANCHOR */}
+         <button 
             onClick={() => scrollToSection('about-section')} 
-            className="transition-opacity duration-300 hover:opacity-60"
-            >
-            ZION SEVILLA
-          </button>
-          <button 
-            onClick={() => scrollToSection('contact-section')} 
-            className="transition-opacity duration-300 hover:opacity-60"
+            className="group relative text-[#e3dac9]/60 hover:text-[#e3dac9] transition-colors duration-500 py-2"
           >
-            CONTACT
+            <span className="relative z-10 transition-transform duration-500 block group-hover:-translate-y-0.5">PROFILE</span>
+            {/* Sliding Underline Gauge */}
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[#C5A880] transition-all duration-500 ease-out group-hover:w-full opacity-80" />
           </button>
+
+          {/* SEPARATOR VECTOR */}
+          <span className="text-[#C5A880]/30 font-serif text-[10px] select-none">❖</span>
+
+          {/* CONTACT ACTION */}
+          <button 
+            onClick={() => scrollToSection('contact')} 
+            className="group relative text-[#e3dac9]/60 hover:text-[#e3dac9] transition-colors duration-500 py-2"
+          >
+            <span className="relative z-10 transition-transform duration-500 block group-hover:-translate-y-0.5">CONTACT</span>
+            {/* Sliding Underline Gauge */}
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-[#C5A880] transition-all duration-500 ease-out group-hover:w-full opacity-80" />
+          </button>
+
         </div>
       </nav>
 
-      {/* FLOATING SCROLL INDICATOR */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-40 font-mono text-[9px] tracking-[0.4em] opacity-40 animate-pulse uppercase">
-        ↓ SCROLL TO ARCHIVE
-      </div>
+      {/* ========================================================================= */}
+      {/* THEATRICAL TICKER SCROLL INDICATOR                                       */}
+      {/* ========================================================================= */}
+      {/* Added custom keyframe style to handle the looping film tracking shutter motion */}
+      <style>{`
+        @keyframes shutter-drop {
+          0% { transform: translateY(-10px); opacity: 0; }
+          30% { transform: translateY(0); opacity: 0.5; }
+          70% { transform: translateY(0); opacity: 0.5; }
+          100% { transform: translateY(12px); opacity: 0; }
+        }
+        .animate-shutter {
+          animation: shutter-drop 2.2s infinite cubic-bezier(0.76, 0, 0.24, 1);
+        }
+      `}</style>
 
     </section>
   )

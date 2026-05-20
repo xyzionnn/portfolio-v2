@@ -4,8 +4,8 @@ export default function Works({ projects }) {
       
       {/* HIGH-DENSITY BLUEPRINT TOP BAR */}
       <div className="w-full px-8 md:px-16 lg:px-24 xl:px-32 flex justify-between items-center pb-6 opacity-30 font-mono text-[9px] tracking-[0.4em] border-b border-neutral-900/50 uppercase">
-        <span>DATA_STREAM // CORE_ARCHIVE</span>
-        <span>ACT II : COMPILATION</span>
+        <span>THE OPEN SCHEMA</span>
+        <span>SCENE I : PROJECTS ARCHIVE</span>
       </div>
 
       {/* GIANT EDITORIAL HEADER CRAWL */}
@@ -31,7 +31,7 @@ export default function Works({ projects }) {
               <div className="w-full lg:w-1/2 flex flex-col justify-center">
                 
                 {/* Micro Tagline - Shifts tracking out when hovering the row */}
-                <span className="font-mono text-[9px] tracking-[0.25em] text-neutral-500 block mb-4 uppercase transition-all duration-500 group-hover/row:text-[#14213B] group-hover/row:tracking-[0.35em]">
+                <span className="font-mono text-[9px] tracking-[0.25em] text-neutral-500 block mb-4 uppercase transition-all duration-500 group-hover/row:text-[#C5A880] group-hover/row:tracking-[0.35em]">
                   // {project.tagline}
                 </span>
 
@@ -75,13 +75,27 @@ export default function Works({ projects }) {
                   {/* INTERNAL INTERACTION WINDOW */}
                   <div className="w-[85%] h-full bg-neutral-900 relative overflow-hidden border-x border-neutral-950">
                     
-                    {/* The Chromatic Color Layer — Swaps blend styles or fades away on context row hover */}
-                    <div className="absolute inset-0 bg-[#14213B]/40 mix-blend-multiply z-10 transition-all duration-700 ease-out group-hover/row:bg-transparent" />
+                    {/* The Chromatic Color Layer — Fades out to reveal crisp colors when the row is hovered */}
+                    <div className="absolute inset-0 bg-[#14213B]/40 mix-blend-multiply z-10 transition-all duration-700 ease-out group-hover/row:bg-transparent pointer-events-none" />
                     
-                    {/* Background Graphic Asset container placeholder */}
-                    <div className="w-full h-full object-cover transform scale-100 group-hover/row:scale-[1.04] transition-transform duration-1000 ease-out flex items-center justify-center text-neutral-700 font-mono text-[9px] tracking-[0.3em] uppercase select-none">
-                      [ SCHEMA_PREVIEW_FRAME ]
-                    </div>
+                    {/* ========================================================================= */}
+                    {/* DYNAMIC MEDIA DISPATCHER                                                  */}
+                    {/* ========================================================================= */}
+                    {project.video ? (
+                      <video
+                        src={project.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover transform scale-100 group-hover/row:scale-[1.04] transition-transform duration-1000 ease-out"
+                      />
+                    ) : (
+                      /* Fallback asset state layout if video is null */
+                      <div className="w-full h-full flex items-center justify-center text-neutral-700 font-mono text-[9px] tracking-[0.3em] uppercase select-none transform scale-100 group-hover/row:scale-[1.04] transition-transform duration-1000 ease-out">
+                        [ SCHEMA_PREVIEW_FRAME ]
+                      </div>
+                    )}
 
                     {/* Shading Vignette Accent */}
                     <div className="absolute inset-0 pointer-events-none border border-white/5 shadow-[inset_0_0_40px_rgba(0,0,0,0.95)] z-20" />

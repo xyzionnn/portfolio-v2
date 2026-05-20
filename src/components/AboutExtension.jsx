@@ -25,33 +25,45 @@ export default function AboutExtension() {
       */}
       <div className="w-full flex flex-col gap-7 relative z-10">
         
-        {/* ========================================================================= */}
-        {/* BLOCK 1: SKILLS & STACK (Anchored Left, Cuts Off Right)                   */}
-        {/* ========================================================================= */}
-        {/* Container spans from the far left of screen, cutting off dynamically around col-span-11 */}
-        <div className="w-full xl:w-[91.666667%] mr-auto bg-[#14213B]/90 border-y border-r border-neutral-900/40 py-16 px-6 md:px-16 lg:px-24 xl:px-32 grid grid-cols-12 gap-x-8 items-start">
+      {/* ========================================================================= */}
+      {/* BLOCK 1: SKILLS & STACK (Anchored Left, Cuts Off Right)                   */}
+      {/* ========================================================================= */}
+      <div className="w-full xl:w-[91.666667%] mr-auto bg-[#14213B]/90 border-y border-r border-neutral-900/40 py-16 px-6 md:px-16 lg:px-24 xl:px-32 grid grid-cols-12 gap-x-8 items-start">
+        
+        {/* Column 1: Main Section Title (Locked Left Anchor Vector) */}
+        <div className="col-span-12 md:col-span-4 lg:col-span-4 text-neutral-400 font-bold uppercase tracking-[0.25em] pt-1">
+          SKILLS & STACK
+        </div>
+
+        {/* Columns 2 & 3: NEW GRID PAIRING CONTAINER (Ensures perfect cross-alignment) */}
+        <div className="col-span-12 md:col-span-8 lg:col-span-8 grid grid-cols-8 gap-x-8 gap-y-3 items-baseline">
           
-          {/* Main Title Category Section (Snapped to column anchor 1) */}
-          <div className="col-span-12 md:col-span-4 lg:col-span-4 text-neutral-400 font-bold uppercase tracking-[0.25em] pt-1">
-            SKILLS & STACK
-          </div>
+          {/* ROW 1: CORE LANGUAGES (Snapped to col-span-4 anchor) */}
+          <span className="col-span-4 text-neutral-400/90 font-medium">JAVASCRIPT</span>
+          {/* (Value Column Empty) */}
+          <span className="col-span-4" />
 
-          {/* First Text Column (Snapped to column anchor 2) */}
-          <div className="col-span-6 md:col-span-4 lg:col-span-4 flex flex-col gap-3 text-neutral-400/90">
-            <span>JAVASCRIPT</span>
-            <span>HTML5/CSS3/SCSS</span>
-            <span>FRAMEWORKS</span>
-            <span>TOOLS</span>
-            <span>GIT</span>
-          </div>
+          {/* ROW 2: MARKUP (Snapped to col-span-4 anchor) */}
+          <span className="col-span-4 text-neutral-400/90 font-medium">HTML5/CSS3/SCSS</span>
+          {/* (Value Column Empty) */}
+          <span className="col-span-4" />
 
-          {/* Second Text Column (Snapped to column anchor 3) */}
-          <div className="col-span-6 md:col-span-4 lg:col-span-4 flex flex-col gap-3 text-neutral-300">
-            <span>REACT, TAILWIND, NEXT</span>
-            <span>FIGMA, ADOBE SUITE</span>
-          </div>
+          {/* ROW 3: FRAMEWORKS VECTOR (Ensuring perfect cross-axis baseline pairing) */}
+          <span className="col-span-4 text-neutral-400/90 font-medium">FRAMEWORKS</span>
+          <span className="col-span-4 text-neutral-300">REACT, TAILWIND, NEXT</span>
+
+          {/* ROW 4: TOOLS VECTOR (Ensuring perfect cross-axis baseline pairing) */}
+          <span className="col-span-4 text-neutral-400/90 font-medium">TOOLS</span>
+          <span className="col-span-4 text-neutral-300">FIGMA, ADOBE SUITE</span>
+
+          {/* ROW 5: VERSION CONTROL (Snapped to col-span-4 anchor) */}
+          <span className="col-span-4 text-neutral-400/90 font-medium">GIT</span>
+          {/* (Value Column Empty) */}
+          <span className="col-span-4" />
 
         </div>
+
+      </div>
 
         {/* ========================================================================= */}
         {/* BLOCK 2: VALUES & MOTIVES (Full Center-Bleed Block Matrix)                 */}

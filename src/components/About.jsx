@@ -37,7 +37,7 @@ export default function About({ scrollToSection, setView }) {
 
             {/* Bottom micro running frame metadata tape label */}
             <div className="absolute -bottom-6 left-3 right-3 flex justify-between font-mono text-[8px] tracking-widest text-neutral-500 uppercase">
-              <span>FRAME SEC: 04 // ZS</span>
+              <span>FRAME SEC: 11 // 23</span>
               <span>ISO 400</span>
             </div>
           </div>
